@@ -9,8 +9,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(title: const Text(_title)),
-          body: MyApp(),
+      appBar: AppBar(title: const Text(_title)),
+      body: MyApp(),
     ));
   }
 }
@@ -47,8 +47,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Listener(
+    return  Listener(
           onPointerDown: setColorState,
           child: Scaffold(
             body: Center(
@@ -60,12 +59,11 @@ class _MyAppState extends State<MyApp> {
                             fontWeight: FontWeight.bold,
                             fontSize: 40,
                             color: Color.fromRGBO(255 - _indexR, 255 - _indexG,
-                                255 - _indexB, 1))),
-                  ]),
+                                255 - _indexB, 1)))
+                  ])
             ),
-            backgroundColor:
-                Color.fromRGBO(_indexR, _indexG, _indexB, _opacity),
-          )),
-    );
+            backgroundColor: Color.fromRGBO(_indexR, _indexG, _indexB, _opacity),
+          )
+        );
   }
 }
