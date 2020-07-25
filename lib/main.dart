@@ -48,22 +48,19 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Listener(
-          onPointerDown: setColorState,
-          child: Scaffold(
-            body: Center(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Hey there',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 40,
-                            color: Color.fromRGBO(255 - _indexR, 255 - _indexG,
-                                255 - _indexB, 1)))
-                  ])
-            ),
-            backgroundColor: Color.fromRGBO(_indexR, _indexG, _indexB, _opacity),
-          )
-        );
+        onPointerDown: setColorState,
+        child: Container(
+            color: Color.fromRGBO(_indexR, _indexG, _indexB, _opacity),
+            child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                  Text('Hey there',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                          color: Color.fromRGBO(
+                              255 - _indexR, 255 - _indexG, 255 - _indexB, 1)))
+                ]))));
   }
 }
