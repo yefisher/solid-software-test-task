@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return  Listener(
+    return Listener(
           onPointerDown: setColorState,
           child: Scaffold(
             body: Center(
